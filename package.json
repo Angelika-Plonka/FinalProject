@@ -5,12 +5,13 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wp": "./node_modules/.bin/webpack"
+    "wp": "./node_modules/.bin/webpack",
+    "serv": "./node_modules/.bin/webpack-dev-server --hot"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-   
+    "resolve-url-loader": "^2.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -25,6 +26,6 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.9.2"
   }
 }

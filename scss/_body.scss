@@ -1,7 +1,8 @@
+//var css = require('!css-loader!resolve-url-loader!sass-loader?sourceMap!./file.scss');
+//require('!style-loader!css-loader!resolve-url-loader!sass-loader?sourceMap!./file.scss');
+
 #about{
   height: 100vh;
-  background: darkslategrey url("../images/tlo.jpg") no-repeat center/cover;
-  //background-image: url("../images/tlo.jpg");
-  //background: white url("../kominek.jpg") no-repeat center/cover;
+  background-image: url("../images/tlo.jpg");
 
 }

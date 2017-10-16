@@ -13,4 +13,36 @@ header{
     line-height: 75px;
   };
 }
-
+//nav{
+//  display: none;
+//  @include desktop {
+//    display: block !important;
+//  };
+//  ul{
+//    background: rgba(255,255,255, 0.25);
+//    @include desktop{
+//      background: white;
+//    }
+//    li {
+//      min-height: 50px;
+//      line-height: 50px;
+//      border-top: 5px solid rgba(255, 255, 255, 0.5);
+//      font-size: 20px;
+//      &:hover {
+//        background: $mainColor;
+//      }
+//      &:hover > a {
+//        color: white;
+//      }
+//      @include desktop {
+//        font-size: 25px;
+//        display: inline-block;
+//        width: 33.333%;
+//        border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+//        &:nth-of-type(2) {
+//          border-left: 3px solid $mainColor;
+//          border-right: 3px solid $mainColor;
+//        }
+//      }
+//    }
+//

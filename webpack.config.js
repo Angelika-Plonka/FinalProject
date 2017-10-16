@@ -9,6 +9,11 @@ module.exports = {
         path: __dirname+'/',
         filename: '[name]'
     },
+    devServer: {
+        inline: true,
+        contentBase: './',
+        port: 3001
+    },
     watch: true,
     module: {
         loaders: [
@@ -23,7 +28,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
+                    use: ['css-loader', 'resolve-url-loader' ,'sass-loader?sourceMap=true', ]
                 })
 
             },
@@ -33,7 +38,12 @@ module.exports = {
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {}
+                        options: {
+                            emitFile: true,
+                            name: 'assets/[name].[ext]',
+                            context: '',
+                            publicPath: '/'
+                        }
                     }
                 ]
             }
@@ -41,6 +51,5 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('./css/style.css')
-
     ]
-};
+}
