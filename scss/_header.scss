@@ -1,48 +1,69 @@
-@import "grid";
+//@import "_grid";
+//@import "_variables.scss";
 
-header{
-  font-weight: bold;
-  min-height: 50px;
-  line-height: 50px;
+header {
+  height: 100vh;
+  min-width: 1300px;
+  width: 100vw;
+  background-image: url("../images/tlo.jpg");
+  background-color: $mainColor;
+  background-position: top center;
+  background-size: cover;
+  color: $colorText;
   text-align: center;
-  position: fixed;
-  top: 0;
-  @include desktop{
-    background-position: bottom;
-    min-height: 75px;
-    line-height: 75px;
-  };
+  nav {
+    position: fixed;
+    background: $mainColor;
+    z-index: 1;
+    display: none;
+    @include desktop {
+      display: block !important;
+    }
+    ul {
+      li {
+        font-weight: bold;
+        min-height: 20px;
+        font-size: 15px;
+        a{
+          color: $colorText;
+          text-decoration: none;
+          //text-underline: none;
+          &:hover > a {
+            color: $colorText;
+          }
+        }
+        @include desktop {
+          padding-right: 5%;
+          font-size: 24px;
+          display: inline-block;
+          width: (90%/6);
+        }
+      }
+
+    }
+  }
+  #about{
+    h1{
+      font-weight: bold;
+      font-family: 'Dancing Script', cursive;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 18%;
+      position: relative;
+      @include desktop{
+        font-size: 50px;
+      }
+    }
+    h2{
+      position: absolute;
+      font-family: 'Dancing Script', cursive;
+      bottom: 20%;
+      left: 20%;
+      font-size: 25px;
+      font-weight: bold;
+      @include desktop{
+        font-size: 45px;
+      }
+    }
+  }
 }
-//nav{
-//  display: none;
-//  @include desktop {
-//    display: block !important;
-//  };
-//  ul{
-//    background: rgba(255,255,255, 0.25);
-//    @include desktop{
-//      background: white;
-//    }
-//    li {
-//      min-height: 50px;
-//      line-height: 50px;
-//      border-top: 5px solid rgba(255, 255, 255, 0.5);
-//      font-size: 20px;
-//      &:hover {
-//        background: $mainColor;
-//      }
-//      &:hover > a {
-//        color: white;
-//      }
-//      @include desktop {
-//        font-size: 25px;
-//        display: inline-block;
-//        width: 33.333%;
-//        border-bottom: 5px solid rgba(255, 255, 255, 0.5);
-//        &:nth-of-type(2) {
-//          border-left: 3px solid $mainColor;
-//          border-right: 3px solid $mainColor;
-//        }
-//      }
-//    }
-//

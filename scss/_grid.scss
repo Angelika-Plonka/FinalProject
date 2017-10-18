@@ -1,6 +1,6 @@
 $numberOfColumns: 6;
-$singleColumnWidth: 100% / $numberOfColumns;
-$maxWidth: 1200px;
+$singleColumnWidth: (100% / $numberOfColumns);
+$maxWidth: 1000px;
 
 @mixin desktop{
   @media (min-width: 640px){
