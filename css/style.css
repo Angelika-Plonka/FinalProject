@@ -149,6 +149,21 @@
   color: white;
 }
 
+footer {
+  height: 50px;
+  background-color: #081712;
+}
+
+footer .row.col-d-6.col-m-6 {
+  font-weight: bold;
+  padding: 1.5% 8%;
+}
+
+footer .row.col-d-6.col-m-6 span:nth-of-type(2) {
+  padding-left: 5%;
+  font-weight: bold;
+}
+
 header {
   height: 100vh;
   width: 100vw;
@@ -161,7 +176,9 @@ header {
 
 header .hamburger {
   line-height: 50px;
+  text-align: center;
   background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 @media (min-width: 640px) {
@@ -175,6 +192,11 @@ header nav {
   background: #050f0c;
   z-index: 1;
   display: none;
+  text-transform: uppercase;
+}
+
+header nav ul {
+  text-align: center;
 }
 
 @media (min-width: 640px) {
@@ -186,16 +208,19 @@ header nav {
 header nav ul li {
   min-height: 30px;
   font-size: 15px;
-  text-transform: uppercase;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+header nav ul li:hover {
+  color: white;
+  font-weight: bold;
+  background-color: #12352b;
 }
 
 header nav ul li a {
   color: white;
   text-decoration: none;
-}
-
-header nav ul li a:hover > a {
-  color: white;
 }
 
 @media (min-width: 640px) {
@@ -224,7 +249,7 @@ header #about h1 {
 
 header #about h2 {
   position: absolute;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   bottom: 20%;
   left: 25%;
   font-size: 25px;
@@ -647,33 +672,76 @@ input[type=button] {
   }
 }
 
+#health {
+  margin: 100px auto;
+  text-align: center;
+}
+
+#health div div {
+  padding-right: 5%;
+}
+
+#health div div a {
+  color: white;
+  text-decoration: none;
+  background-color: #0f2e24;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+@media (min-width: 640px) {
+  #health div div a {
+    font-size: 20px;
+  }
+
+  #health div div a:hover {
+    background-color: #18483a;
+  }
+}
+
+#health h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 640px) {
+  #health h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
+#health p {
+  font-size: 15px;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 640px) {
+  #health p {
+    font-size: 20px;
+  }
+}
+
 html {
   background: #050f0c;
   color: white;
 }
 
-#products,
-#contact {
-  background: #050f0c;
-}
-
 #health,
-#perfume,
-#local {
-  min-height: 400px;
-}
-
-#products {
+#products,
+#perfume {
   min-height: 400px;
 }
 
 #contact {
-  height: 750px;
+  height: 650px;
 }
 
 @media (min-width: 640px) {
   #contact {
-    height: 600px;
+    height: 500px;
   }
 }
 
@@ -777,6 +845,170 @@ div.slide:nth-of-type(5) {
   animation-iteration-count: infinite;
 }
 
+#products {
+  margin: 100px auto;
+  text-align: left;
+}
+
+#products div div:nth-of-type(2) {
+  padding-left: 8%;
+}
+
+#products div div:nth-of-type(2) ul {
+  list-style: circle;
+  text-align: left;
+}
+
+#products div div:nth-of-type(2) ul li {
+  font-size: 15px;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 640px) {
+  #products div div:nth-of-type(2) ul li {
+    font-size: 20px;
+  }
+}
+
+#products h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 640px) {
+  #products h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
+#perfume {
+  margin: 100px auto;
+  text-align: center;
+}
+
+#perfume div div {
+  padding-right: 5%;
+}
+
+#perfume div div a {
+  color: white;
+  text-decoration: none;
+  background-color: #0f2e24;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+@media (min-width: 640px) {
+  #perfume div div a {
+    font-size: 20px;
+  }
+
+  #perfume div div a:hover {
+    background-color: #18483a;
+  }
+}
+
+#perfume h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 640px) {
+  #perfume h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
+#perfume h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15%;
+}
+
+@media (min-width: 640px) {
+  #perfume h3 {
+    font-size: 25px;
+  }
+}
+
+#contact h2 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 640px) {
+  #contact h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
+#contact form {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#contact form label {
+  margin-top: 15px;
+}
+
+#contact form input {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#contact form input:last-of-type {
+  width: 50%;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+  color: white;
+  background-color: #0f2e24;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+@media (min-width: 640px) {
+  #contact form input:last-of-type {
+    font-size: 20px;
+  }
+
+  #contact form input:last-of-type:hover {
+    background-color: #18483a;
+  }
+}
+
+#contact form textarea {
+  width: 90%;
+  height: 30vh;
+}
+
+#local {
+  height: 500px;
+}
+
+#local iframe {
+  width: 90%;
+  height: 350px;
+  margin-left: 5%;
+  box-shadow: 0 5px 10px 0 white;
+}
+
+@media (min-width: 640px) {
+  #local iframe {
+    height: 400px;
+  }
+}
+
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }

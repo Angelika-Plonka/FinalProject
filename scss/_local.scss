@@ -1,0 +1,13 @@
+#local{
+  height: 500px;
+  iframe{
+    width: 90%;
+    height: 350px;
+    margin-left: 5%;
+
+    box-shadow: 0 5px 10px 0 $colorText;
+    @include desktop{
+      height: 400px;
+    };
+  }
+}

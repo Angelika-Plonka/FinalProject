@@ -11,7 +11,9 @@ header {
   color: $colorText;
   .hamburger{
     line-height: 50px;
+    text-align: center;
     background: rgba(255,255,255, 0.5);
+    cursor: pointer;
     @include desktop{
       display: none;
     };
@@ -21,8 +23,10 @@ header {
     background: $mainColor;
     z-index: 1;
     display: none;
+    text-transform: uppercase;
 
     ul {
+      text-align: center;
       @include desktop{
         display: flex;
         //justify-content: space-around;
@@ -31,13 +35,16 @@ header {
       li {
         min-height: 30px;
         font-size: 15px;
-        text-transform: uppercase;
+        cursor: pointer;
+        padding-top: 5px;
+        &:hover{
+          color: $colorText;
+          font-weight: bold;
+          background-color: lighten($mainColor,10%);
+        }
         a{
           color: $colorText;
           text-decoration: none;
-          &:hover > a {
-            color: $colorText;
-          }
         }
         @include desktop {
           font-size: 20px;
@@ -64,7 +71,7 @@ header {
     }
     h2{
       position: absolute;
-      font-family: 'Dancing Script', cursive;
+      font-family: $fontItalics;
       bottom: 20%;
       left: 25%;
       font-size: 25px;

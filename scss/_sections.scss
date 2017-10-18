@@ -3,41 +3,13 @@ html{
   color: $colorText;
 }
 
-
-#products, #contact{
-  background: $mainColor;
-  //article{
-  //  padding: 18px 0;
-  //  div{
-  //    padding: 10px;
-  //    font-size: 15px;
-  //    line-height: 30px;
-  //    text-align: center;
-  //    @include desktop{
-  //      font-size: 25px;
-  //    }
-  //    h1{
-  //      font-size: 25px;
-  //      @include desktop{
-  //        font-size: 35px;
-  //      }
-  //    }
-  //  }
-  //}
-}
-
-#health, #perfume, #local{
+#health, #products, #perfume{
   min-height: 400px;
 }
-
-#products{
-  min-height: 400px;
-}
-
 
 #contact{
-  height: 750px;
+  height: 650px;
   @include desktop{
-    height: 600px;
+    height: 500px;
   }
 }

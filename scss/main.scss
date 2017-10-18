@@ -3,10 +3,15 @@
 @import 'header';
 @import "reset";
 @import "grid";
+@import "health";
 @import "sections";
 @import "animation";
+@import "products";
 @import "variables";
+@import "perfume";
+@import "contact";
+@import "local";
 
 *{
-font-family: 'Open Sans', sans-serif;
+font-family: $fontRegular;
 }

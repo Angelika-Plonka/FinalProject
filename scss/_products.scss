@@ -1,0 +1,27 @@
+#products {
+  margin: 100px auto;
+  text-align: left;
+  div div:nth-of-type(2) {
+    padding-left: 8%;
+    ul {
+      list-style: circle;
+      text-align: left;
+      li{
+        font-size: 15px;
+        padding-bottom: 5%;
+        @include desktop{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  h2{
+    font-family: $fontItalics;
+    font-size: 30px;
+    padding-bottom: 10%;
+    @include desktop{
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+}
