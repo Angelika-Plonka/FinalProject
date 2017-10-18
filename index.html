@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css" >
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -12,10 +13,12 @@
 <body>
 <header class="home container">
     <div class="row">
-        <div class="mobileMenu col-m-1 fa fa-bars"></div>
+        <div class="col-m-1 hamburger">
+            <i class="fa fa-bars" aria-hidden="false"></i>
+        </div>
     </div>
     <div class="row">
-        <nav class="col-m-6 col-d-6">
+        <nav class="desktopMenu col-m-6 col-d-6">
             <ul>
                 <li>
                     <a href="#slider"> News </a>
@@ -90,7 +93,7 @@
         <div class="row">
             <div class="col-m-6 col-d-6">
                 <div class="part">
-                    <img src="images/kominek1.jpg"/>
+                    <!--<img src="images/kominek1.jpg"/>-->
                     <h2>Oferta naszych produktów</h2>
                     <ul>
                         <li>olejki eteryczne</li>
@@ -117,7 +120,7 @@
 </main>
     <section id="local" class="container">
         <div class="row">
-            <div class="col-m-6 col-d-6">
+            <div class="col-m-6 col-d-3">
                 <div class="part">
                     <h2>Jak do nas trafić</h2>
                     <span>g</span>
@@ -140,12 +143,12 @@
                 </form>
             </div>
             <div class="col-m-6 col-d-3">
-                <iframe src="https://www.google.pl/maps/place/1+Maja+5,+Katowice/@50.2580864,19.034396,17z/data=!3m1!4b1!4m5!3m4!1s0x4716cfcadba9378d:0x6e47d258c00cdbd2!8m2!3d50.258083!4d19.03659" width="50%" height="450px" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.025222559611!2d19.01469065081063!3d50.254113209273406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716ce48aa6b1c7b%3A0x22b7eb916cbcbc7b!2sMydlarnia+u+Franciszka!5e0!3m2!1spl!2spl!4v1508317180885" width="600" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </article>
     </section>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="js/out.js"></script>
 </body>
 </html>

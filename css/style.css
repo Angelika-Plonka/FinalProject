@@ -134,36 +134,40 @@
     vertical-align: middle;
     font-size: 35px;
   }
+}
 
-  #slider div.row > div .slide span a {
-    border: 2px solid #050f0c;
-    background: rgba(255, 255, 255, 0.25);
-    width: 40%;
-    height: 50%;
-    text-decoration: none;
-    position: absolute;
-    top: 200%;
-  }
+#slider div.row > div .slide span a {
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  #slider div.row > div .slide span a:link {
-    color: black;
-  }
+#slider div.row > div .slide span a:link {
+  color: white;
+}
 
-  #slider div.row > div .slide span a:visited {
-    color: black;
-  }
+#slider div.row > div .slide span a:visited {
+  color: white;
 }
 
 header {
   height: 100vh;
-  min-width: 1300px;
   width: 100vw;
   background-image: url(/assets/tlo.jpg);
   background-color: #050f0c;
   background-position: top center;
   background-size: cover;
   color: white;
-  text-align: center;
+}
+
+header .hamburger {
+  line-height: 50px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 640px) {
+  header .hamburger {
+    display: none;
+  }
 }
 
 header nav {
@@ -174,15 +178,15 @@ header nav {
 }
 
 @media (min-width: 640px) {
-  header nav {
-    display: block !important;
+  header nav ul {
+    display: flex;
   }
 }
 
 header nav ul li {
-  font-weight: bold;
-  min-height: 20px;
+  min-height: 30px;
   font-size: 15px;
+  text-transform: uppercase;
 }
 
 header nav ul li a {
@@ -196,10 +200,10 @@ header nav ul li a:hover > a {
 
 @media (min-width: 640px) {
   header nav ul li {
-    padding-right: 5%;
-    font-size: 24px;
-    display: inline-block;
-    width: 15%;
+    font-size: 20px;
+    min-height: 50px;
+    width: 13%;
+    border: 1px solid red;
   }
 }
 
@@ -222,7 +226,7 @@ header #about h2 {
   position: absolute;
   font-family: 'Dancing Script', cursive;
   bottom: 20%;
-  left: 20%;
+  left: 25%;
   font-size: 25px;
   font-weight: bold;
 }
