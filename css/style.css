@@ -73,15 +73,13 @@
 }
 
 #slider {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin: 50px auto;
   height: 200px;
 }
 
 @media (min-width: 640px) {
   #slider {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 150px auto;
   }
 }
 
@@ -125,6 +123,7 @@
   left: 25%;
   font-weight: bold;
   color: black;
+  text-shadow: 1px -2px 5px black;
   text-align: center;
 }
 
@@ -150,17 +149,30 @@
 }
 
 footer {
-  height: 50px;
+  height: 30px;
+}
+
+@media (min-width: 640px) {
+  footer {
+    height: 40px;
+  }
 }
 
 footer .row.col-d-6.col-m-6 {
   font-weight: bold;
-  padding: 1.5% 8%;
+  padding: 1.5% 25%;
 }
 
-footer .row.col-d-6.col-m-6 span:nth-of-type(2) {
-  padding-left: 5%;
+footer .row.col-d-6.col-m-6 span {
+  padding-right: 3%;
+}
+
+footer .row.col-d-6.col-m-6 span:nth-of-type(3) {
   font-weight: bold;
+}
+
+footer .row.col-d-6.col-m-6 .fa {
+  color: white;
 }
 
 header {
@@ -240,8 +252,10 @@ header nav ul li a {
 
 header #about h1 {
   font-weight: bold;
+  color: black;
+  text-shadow: 20px -3px 25px white;
   font-family: 'Dancing Script', cursive;
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
   padding-top: 18%;
   position: relative;
@@ -249,22 +263,24 @@ header #about h1 {
 
 @media (min-width: 640px) {
   header #about h1 {
-    font-size: 50px;
+    font-size: 70px;
   }
 }
 
 header #about h2 {
   position: absolute;
   font-family: "Dancing Script", cursive;
+  color: black;
+  text-shadow: 20px -3px 25px white;
   bottom: 20%;
-  left: 25%;
-  font-size: 25px;
+  left: 20%;
+  font-size: 35px;
   font-weight: bold;
 }
 
 @media (min-width: 640px) {
   header #about h2 {
-    font-size: 45px;
+    font-size: 55px;
   }
 }
 
@@ -560,7 +576,6 @@ samp {
 /* hand cursor on clickable elements */
 
 .clickable,
-label,
 input[type=button],
 input[type=submit],
 input[type=file],
@@ -605,8 +620,14 @@ input[type=button] {
 }
 
 #health {
-  margin: 100px auto;
+  margin: 50px auto;
   text-align: center;
+}
+
+@media (min-width: 640px) {
+  #health {
+    margin: 150px auto;
+  }
 }
 
 #health div div {
@@ -617,13 +638,19 @@ input[type=button] {
   color: white;
   text-decoration: none;
   background-color: #0f2e24;
+  -webkit-box-shadow: 0px 5px 10px 3px white;
+  -moz-box-shadow: 0px 5px 10px 3px white;
+  box-shadow: 0px 5px 10px 3px white;
   font-size: 15px;
   font-weight: bold;
   padding: 10px;
+  position: relative;
+  z-index: 3;
 }
 
 #health div div a:hover {
   background-color: #18483a;
+  cursor: pointer;
 }
 
 @media (min-width: 640px) {
@@ -667,13 +694,17 @@ html {
   min-height: 400px;
 }
 
-#contact {
+#contact,
+#local {
+  position: relative;
+  z-index: 3;
   height: 650px;
 }
 
 @media (min-width: 640px) {
-  #contact {
-    height: 500px;
+  #contact,
+  #local {
+    height: 450px;
   }
 }
 
@@ -778,8 +809,14 @@ div.slide:nth-of-type(5) {
 }
 
 #products {
-  margin: 100px auto;
+  margin: 50px auto;
   text-align: left;
+}
+
+@media (min-width: 640px) {
+  #products {
+    margin: 150px auto;
+  }
 }
 
 #products div div:nth-of-type(2) {
@@ -787,18 +824,18 @@ div.slide:nth-of-type(5) {
 }
 
 #products div div:nth-of-type(2) ul {
-  list-style: circle;
+  list-style: square;
   text-align: left;
 }
 
 #products div div:nth-of-type(2) ul li {
-  font-size: 15px;
+  font-size: 20px;
   padding-bottom: 5%;
 }
 
 @media (min-width: 640px) {
   #products div div:nth-of-type(2) ul li {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -816,8 +853,14 @@ div.slide:nth-of-type(5) {
 }
 
 #perfume {
-  margin: 100px auto;
   text-align: center;
+  margin: 50px auto;
+}
+
+@media (min-width: 640px) {
+  #perfume {
+    margin: 150px auto;
+  }
 }
 
 #perfume div div {
@@ -826,15 +869,21 @@ div.slide:nth-of-type(5) {
 
 #perfume div div a {
   color: white;
+  -webkit-box-shadow: 0px 5px 10px 3px white;
+  -moz-box-shadow: 0px 5px 10px 3px white;
+  box-shadow: 0px 5px 10px 3px white;
   text-decoration: none;
   background-color: #0f2e24;
   font-size: 15px;
   font-weight: bold;
   padding: 10px;
+  position: relative;
+  z-index: 3;
 }
 
 #perfume div div a:hover {
   background-color: #18483a;
+  cursor: pointer;
 }
 
 @media (min-width: 640px) {
@@ -845,13 +894,15 @@ div.slide:nth-of-type(5) {
 
 #perfume h2 {
   font-family: "Dancing Script", cursive;
+  color: darkred;
+  text-shadow: 1px -2px 5px black;
   font-size: 30px;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 
 @media (min-width: 640px) {
   #perfume h2 {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
   }
 }
@@ -868,8 +919,20 @@ div.slide:nth-of-type(5) {
   }
 }
 
+#contact {
+  margin: 50px auto;
+}
+
+@media (min-width: 640px) {
+  #contact {
+    margin: 200px auto;
+  }
+}
+
 #contact h2 {
   text-align: center;
+  color: darkred;
+  text-shadow: 1px -2px 5px black;
   font-family: "Dancing Script", cursive;
   font-size: 30px;
   padding-bottom: 5%;
@@ -877,12 +940,28 @@ div.slide:nth-of-type(5) {
 
 @media (min-width: 640px) {
   #contact h2 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
   }
 }
 
+#contact h3 {
+  color: darkred;
+  text-align: center;
+  line-height: 400%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media (min-width: 640px) {
+  #contact h3 {
+    font-size: 40px;
+  }
+}
+
 #contact form {
+  font-size: 25px;
+  line-height: 150%;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -907,10 +986,13 @@ div.slide:nth-of-type(5) {
   font-size: 15px;
   font-weight: bold;
   padding: 10px;
+  position: relative;
+  z-index: 3;
 }
 
 #contact form input:last-of-type:hover {
   background-color: #18483a;
+  cursor: pointer;
 }
 
 @media (min-width: 640px) {
@@ -924,20 +1006,119 @@ div.slide:nth-of-type(5) {
   height: 30vh;
 }
 
+#contact .social {
+  width: 400px;
+  height: 400px;
+  margin: 15% 0 15% 0;
+  color: white;
+  border-radius: 100px 100px 100px 100px;
+  -moz-border-radius: 100px 100px 100px 100px;
+  -webkit-border-radius: 100px 100px 100px 100px;
+  border: 5px solid white;
+}
+
+@media (min-width: 640px) {
+  #contact .social {
+    width: 100%;
+    height: 400px;
+    margin: 15% 0 0 15%;
+  }
+}
+
+#contact .fa {
+  font-size: 80px;
+  padding: 25px;
+}
+
+@media (min-width: 640px) {
+  #contact .fa {
+    font-size: 100px;
+    padding: 35px;
+  }
+}
+
+#contact .fa:first-of-type {
+  color: #3b5998;
+}
+
+#contact .fa:nth-of-type(2) {
+  color: #00aced;
+}
+
+#contact .fa:last-of-type {
+  color: #cc181e;
+}
+
 #local {
-  height: 500px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  #local {
+    margin: 300px auto 0 auto;
+  }
 }
 
 #local iframe {
   width: 90%;
   height: 350px;
   margin-left: 5%;
-  box-shadow: 0 5px 10px 0 white;
 }
 
 @media (min-width: 640px) {
   #local iframe {
     height: 400px;
+  }
+}
+
+#local h2 {
+  font-family: "Dancing Script", cursive;
+  color: darkred;
+  text-shadow: 1px -2px 5px black;
+  font-size: 30px;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 640px) {
+  #local h2 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
+
+#local h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  line-height: 250%;
+  font-weight: bold;
+}
+
+@media (min-width: 640px) {
+  #local h3 {
+    font-size: 35px;
+  }
+}
+
+#local h4 {
+  font-size: 15px;
+}
+
+@media (min-width: 640px) {
+  #local h4 {
+    font-size: 20px;
+  }
+}
+
+#local h4:nth-of-type(3) {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 250%;
+}
+
+@media (min-width: 640px) {
+  #local h4:nth-of-type(3) {
+    font-size: 25px;
   }
 }
 
@@ -949,22 +1130,22 @@ div.slide:nth-of-type(5) {
   width: 100vw;
   height: 100vh;
   animation-name: welcome;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-fill-mode: forwards;
   display: block;
 }
 
 #opening #flower {
-  background-image: url(/assets/transparentFlower.png);
-  height: 500px;
-  width: 500px;
+  background-image: url(/assets/transparent.png);
+  height: 400px;
+  width: 400px;
   position: relative;
   margin: 0 auto;
-  background-size: 55%;
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
   animation-name: welcome, rotation;
-  animation-duration: 4s, 4s;
+  animation-duration: 5s, 5s;
   animation-fill-mode: forwards;
 }
 
@@ -974,27 +1155,30 @@ div.slide:nth-of-type(5) {
   }
 }
 
-#opening span {
+#opening h3 {
   position: absolute;
   font-family: "Dancing Script", cursive;
+  animation-name: moveH2;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
   color: darkred;
   font-weight: bold;
   font-size: 40px;
   top: 80%;
-  right: 30%;
+  right: 35%;
 }
 
 @media (min-width: 640px) {
-  #opening span {
-    font-size: 70px;
+  #opening h3 {
+    font-size: 80px;
     top: 80%;
-    right: 40%;
+    right: 35%;
   }
 }
 
 @keyframes rotation {
   0% {
-    transform: rotate(0);
+    transform: rotate(0) scale(1.5);
     opacity: 1;
     display: block;
   }
@@ -1005,7 +1189,7 @@ div.slide:nth-of-type(5) {
 
   100% {
     display: none;
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(0);
     opacity: 0;
   }
 }
@@ -1026,6 +1210,28 @@ div.slide:nth-of-type(5) {
 
   100% {
     background-color: black;
+    display: none;
+    opacity: 0;
+    z-index: 2;
+  }
+}
+
+@keyframes moveH2 {
+  0% {
+    transform: translateY(0) scale(1);
+    display: block;
+    opacity: 1;
+  }
+
+  99% {
+    transform: translateY(-300px) scale(2);
+    display: block;
+    opacity: 1;
+    z-index: 5;
+  }
+
+  100% {
+    transform: translateY(-300px) scale(2);
     display: none;
     opacity: 0;
     z-index: 2;

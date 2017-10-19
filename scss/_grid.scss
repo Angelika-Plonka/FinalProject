@@ -42,7 +42,7 @@ $maxWidth: 1000px;
           width: $singleColumnWidth * $i;
         }
       }
-    };
+    }
 
     @include desktop {
       @for $i from 1 through $numberOfColumns{
@@ -50,6 +50,6 @@ $maxWidth: 1000px;
           width: $singleColumnWidth * $i;
         }
       }
-    };
+    }
   }
 }

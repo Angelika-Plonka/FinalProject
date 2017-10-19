@@ -1,13 +1,49 @@
 #local{
-  height: 500px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+  @include desktop{
+    margin: 300px auto 0 auto;
+  }
   iframe{
     width: 90%;
     height: 350px;
     margin-left: 5%;
-
-    box-shadow: 0 5px 10px 0 $colorText;
     @include desktop{
       height: 400px;
-    };
+    }
+  }
+  h2{
+    font-family: $fontItalics;
+    color: darkred;
+    text-shadow: 1px -2px 5px black;
+    font-size: 30px;
+    padding-bottom: 5%;
+    @include desktop{
+      font-size: 35px;
+      font-weight: bold;
+    }
+  }
+  h3{
+    font-family: $fontItalics;
+    font-size: 25px;
+    line-height: 250%;
+    font-weight:bold;
+    @include desktop{
+      font-size: 35px;
+    }
+  }
+  h4{
+    font-size: 15px;
+    @include desktop{
+      font-size: 20px;
+    }
+    &:nth-of-type(3){
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 250%;
+      @include desktop{
+        font-size: 25px;
+      }
+    }
   }
 }

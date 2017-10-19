@@ -1,11 +1,19 @@
 footer{
-  height: 50px;
+  height: 30px;
+  @include desktop{
+    height: 40px;
+  }
   .row.col-d-6.col-m-6{
     font-weight: bold;
-    padding: 1.5% 8%;
-    span:nth-of-type(2){
-      padding-left: 5%;
+    padding: 1.5% 25%;
+    span{
+      padding-right:3%;
+    }
+    span:nth-of-type(3){
       font-weight: bold;
+    }
+    .fa{
+      color: white;
     }
   }
 }

@@ -6,46 +6,48 @@
   width: 100vw;
   height: 100vh;
   animation-name: welcome;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-fill-mode: forwards;
   display: block;
 
-
   #flower{
-    background-image: url(../images/transparentFlower.png);
-    height: 500px;
-    width: 500px;
+    background-image: url(../images/transparent.png);
+    height: 400px;
+    width: 400px;
     position: relative;
     margin: 0 auto;
-    background-size: 55%;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     animation-name: welcome, rotation;
-    animation-duration: 4s, 4s;
+    animation-duration: 5s, 5s;
     animation-fill-mode: forwards;
     @include desktop{
       background-size: 100%;
     }
   }
-  span{
+  h3{
     position: absolute;
     font-family: $fontItalics;
+    animation-name: moveH2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
     color: darkred;
     font-weight: bold;
     font-size: 40px;
     top: 80%;
-    right: 30%;
+    right: 35%;
     @include desktop{
-      font-size: 70px;
+      font-size: 80px;
       top: 80%;
-      right: 40%;
+      right: 35%;
     }
   }
 }
 
 @keyframes rotation{
   0% {
-    transform: rotate(0);
+    transform: rotate(0) scale(1.5);
     opacity: 1;
     display: block;
   }
@@ -54,7 +56,7 @@
   }
   100% {
     display: none;
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(0);
     opacity: 0;
   }
 }
@@ -73,6 +75,26 @@
   }
   100% {
     background-color: black;
+    display: none;
+    opacity: 0;
+    z-index: 2;
+  }
+}
+
+@keyframes moveH2 {
+  0% {
+    transform: translateY(0) scale(1);
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    transform: translateY(-300px) scale(2);
+    display: block;
+    opacity: 1;
+    z-index: 5;
+  }
+  100% {
+    transform: translateY(-300px) scale(2);
     display: none;
     opacity: 0;
     z-index: 2;
