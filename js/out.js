@@ -74,32 +74,56 @@ $(document).ready(function () {
 
     /* hamburger menu */
 
-    var hamburger = $(".hamburger");
-    var desktopMenu = $(".desktopMenu");
+    var hamburgerMenu = $(".hamburger");
+    var menuDesktop = $(".desktopMenu");
 
-    hamburger.on("click", function () {
-        desktopMenu.slideToggle();
+    hamburgerMenu.on("click", function () {
+        menuDesktop.slideToggle();
     });
 
-    desktopMenu.on("click", function () {
+    menuDesktop.on("click", function () {
         if (window.innerWidth < 640) {
-            desktopMenu.slideToggle();
+            menuDesktop.slideToggle();
         }
     });
 
     var resize = function resize() {
         if (window.innerWidth >= 640) {
-            desktopMenu.fadeIn();
-            hamburger.hide();
+            menuDesktop.fadeIn();
+            hamburgerMenu.hide();
         } else {
-            desktopMenu.hide();
-            hamburger.fadeIn();
+            menuDesktop.hide();
+            hamburgerMenu.fadeIn();
         }
     };
     resize();
 
     window.addEventListener("resize", function () {
         resize();
+    });
+
+    /* scrolling button */
+    var upButton = $(".upButton");
+    upButton.fadeOut();
+
+    function checkPosition() {
+        if ($(window).scrollTop() > 100) {
+            upButton.fadeIn();
+        } else {
+            upButton.fadeOut();
+        }
+    };
+
+    checkPosition();
+
+    $(window).scroll(function () {
+        checkPosition();
+    });
+
+    upButton.on("click", function () {
+        $("html").animate({
+            scrollTop: 0
+        }, 800);
     });
 });
 

@@ -11,8 +11,25 @@
 @import "perfume";
 @import "contact";
 @import "local";
-@import "opening";
+//@import "opening";
 
 *{
 font-family: $fontRegular;
+}
+
+.upButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 30px;
+  text-align: center;
+  color: $colorText;
+  background-color: #0e3026;
+  position: fixed;
+  z-index: 3;
+  bottom: 20px;
+  &:hover{
+    cursor: pointer;
+  }
 }

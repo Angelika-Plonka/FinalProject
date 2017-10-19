@@ -63,14 +63,14 @@
       height: 30vh;
     }
   }
-  .social{
-    width: 400px;
-    height: 400px;
-    margin: 15% 0 15% 0;
+  #social{
+    width: 50%;
+    height: 50%;
+    //margin: 15% 0 15% 0;
     @include desktop{
-      width: 100%;
+      width: 45%;
       height: 400px;
-      margin: 15% 0 0 15%;
+      margin: 5% 0 0 5%;
     }
     color: $colorText;
     border-radius: 100px 100px 100px 100px;
@@ -82,7 +82,6 @@
     font-size: 80px;
     padding: 25px;
     @include desktop{
-      font-size: 100px;
       padding: 35px;
     }
     &:first-of-type {

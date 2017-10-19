@@ -36,9 +36,10 @@ header {
         flex: 1 0 auto;
       }
       li {
-        min-height: 30px;
-        font-size: 15px;
+        min-height: 40px;
+        font-size: 20px;
         cursor: pointer;
+        text-align: center;
         padding-top: 5px;
         flex-grow: 1;
         &:hover{

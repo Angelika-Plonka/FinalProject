@@ -2,26 +2,26 @@ $(document).ready(function () {
 
     /* hamburger menu */
 
-    let hamburger = $(".hamburger");
-    let desktopMenu = $(".desktopMenu");
+    let hamburgerMenu = $(".hamburger");
+    let menuDesktop = $(".desktopMenu");
 
-    hamburger.on("click", function () {
-        desktopMenu.slideToggle();
+    hamburgerMenu.on("click", function () {
+        menuDesktop.slideToggle();
     });
 
-    desktopMenu.on("click", function(){
+    menuDesktop.on("click", function(){
         if (window.innerWidth < 640) {
-            desktopMenu.slideToggle();
+            menuDesktop.slideToggle();
         }
     });
 
     let resize = function () {
         if (window.innerWidth >= 640) {
-            desktopMenu.fadeIn();
-            hamburger.hide();
+            menuDesktop.fadeIn();
+            hamburgerMenu.hide();
         } else {
-            desktopMenu.hide();
-            hamburger.fadeIn();
+            menuDesktop.hide();
+            hamburgerMenu.fadeIn();
         }
     };
     resize();
@@ -29,5 +29,30 @@ $(document).ready(function () {
     window.addEventListener("resize", function () {
         resize();
     });
+
+
+    /* scrolling button */
+    let upButton = $(".upButton");
+    upButton.fadeOut();
+
+    function checkPosition () {
+        if ($(window).scrollTop() > 100) {
+            upButton.fadeIn();
+        } else {
+            upButton.fadeOut();
+        }
+    };
+
+    checkPosition();
+
+    $(window).scroll(function(){
+        checkPosition();
+    })
+
+    upButton.on("click", function(){
+        $("html").animate({
+            scrollTop: 0
+        }, 800);
+    })
 
 });

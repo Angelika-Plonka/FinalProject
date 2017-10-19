@@ -160,7 +160,12 @@ footer {
 
 footer .row.col-d-6.col-m-6 {
   font-weight: bold;
-  padding: 1.5% 25%;
+}
+
+@media (min-width: 640px) {
+  footer .row.col-d-6.col-m-6 {
+    padding: 1.5% 40% 1.5% 10%;
+  }
 }
 
 footer .row.col-d-6.col-m-6 span {
@@ -224,9 +229,10 @@ header nav ul {
 }
 
 header nav ul li {
-  min-height: 30px;
-  font-size: 15px;
+  min-height: 40px;
+  font-size: 20px;
   cursor: pointer;
+  text-align: center;
   padding-top: 5px;
   flex-grow: 1;
 }
@@ -1006,10 +1012,9 @@ div.slide:nth-of-type(5) {
   height: 30vh;
 }
 
-#contact .social {
-  width: 400px;
-  height: 400px;
-  margin: 15% 0 15% 0;
+#contact #social {
+  width: 50%;
+  height: 50%;
   color: white;
   border-radius: 100px 100px 100px 100px;
   -moz-border-radius: 100px 100px 100px 100px;
@@ -1018,10 +1023,10 @@ div.slide:nth-of-type(5) {
 }
 
 @media (min-width: 640px) {
-  #contact .social {
-    width: 100%;
+  #contact #social {
+    width: 45%;
     height: 400px;
-    margin: 15% 0 0 15%;
+    margin: 5% 0 0 5%;
   }
 }
 
@@ -1032,7 +1037,6 @@ div.slide:nth-of-type(5) {
 
 @media (min-width: 640px) {
   #contact .fa {
-    font-size: 100px;
     padding: 35px;
   }
 }
@@ -1122,128 +1126,24 @@ div.slide:nth-of-type(5) {
   }
 }
 
-#opening {
-  position: fixed;
-  z-index: 6;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  animation-name: welcome;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  display: block;
-}
-
-#opening #flower {
-  background-image: url(/assets/transparent.png);
-  height: 400px;
-  width: 400px;
-  position: relative;
-  margin: 0 auto;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation-name: welcome, rotation;
-  animation-duration: 5s, 5s;
-  animation-fill-mode: forwards;
-}
-
-@media (min-width: 640px) {
-  #opening #flower {
-    background-size: 100%;
-  }
-}
-
-#opening h3 {
-  position: absolute;
-  font-family: "Dancing Script", cursive;
-  animation-name: moveH2;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  color: darkred;
-  font-weight: bold;
-  font-size: 40px;
-  top: 80%;
-  right: 35%;
-}
-
-@media (min-width: 640px) {
-  #opening h3 {
-    font-size: 80px;
-    top: 80%;
-    right: 35%;
-  }
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0) scale(1.5);
-    opacity: 1;
-    display: block;
-  }
-
-  99% {
-    opacity: 1;
-  }
-
-  100% {
-    display: none;
-    transform: rotate(360deg) scale(0);
-    opacity: 0;
-  }
-}
-
-@keyframes welcome {
-  0% {
-    background-color: black;
-    display: block;
-    opacity: 1;
-  }
-
-  99% {
-    background-color: black;
-    display: block;
-    opacity: 1;
-    z-index: 5;
-  }
-
-  100% {
-    background-color: black;
-    display: none;
-    opacity: 0;
-    z-index: 2;
-  }
-}
-
-@keyframes moveH2 {
-  0% {
-    transform: translateY(0) scale(1);
-    display: block;
-    opacity: 1;
-  }
-
-  99% {
-    transform: translateY(-300px) scale(2);
-    display: block;
-    opacity: 1;
-    z-index: 5;
-  }
-
-  100% {
-    transform: translateY(-300px) scale(2);
-    display: none;
-    opacity: 0;
-    z-index: 2;
-  }
-}
-
-@media (min-width: 640px) {
-  #opening .flower {
-    background-size: auto;
-  }
-}
-
 * {
   font-family: "Open Sans", sans-serif;
+}
+
+.upButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  background-color: #0e3026;
+  position: fixed;
+  z-index: 3;
+  bottom: 20px;
+}
+
+.upButton:hover {
+  cursor: pointer;
 }

@@ -5,7 +5,9 @@ footer{
   }
   .row.col-d-6.col-m-6{
     font-weight: bold;
-    padding: 1.5% 25%;
+    @include desktop{
+      padding: 1.5% 40% 1.5% 10%;
+    }
     span{
       padding-right:3%;
     }
