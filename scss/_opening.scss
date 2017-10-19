@@ -1,0 +1,88 @@
+#opening{
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation-name: welcome;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  display: block;
+
+
+  #flower{
+    background-image: url(../images/transparentFlower.png);
+    height: 500px;
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: welcome, rotation;
+    animation-duration: 4s, 4s;
+    animation-fill-mode: forwards;
+    @include desktop{
+      background-size: 100%;
+    }
+  }
+  span{
+    position: absolute;
+    font-family: $fontItalics;
+    color: darkred;
+    font-weight: bold;
+    font-size: 40px;
+    top: 80%;
+    right: 30%;
+    @include desktop{
+      font-size: 70px;
+      top: 80%;
+      right: 40%;
+    }
+  }
+}
+
+@keyframes rotation{
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+    display: block;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes welcome {
+  0% {
+    background-color: black;
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    background-color: black;
+    display: block;
+    opacity: 1;
+    z-index: 5;
+  }
+  100% {
+    background-color: black;
+    display: none;
+    opacity: 0;
+    z-index: 2;
+  }
+}
+
+@include desktop{
+  #opening{
+    .flower{
+      background-size: auto;
+    }
+  }
+}

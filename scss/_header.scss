@@ -1,16 +1,20 @@
-//@import "_grid";
-//@import "_variables.scss";
-
 header {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-image: url("../images/tlo.jpg");
   background-color: $mainColor;
   background-position: top center;
   background-size: cover;
   color: $colorText;
+  &.home {
+    &.container {
+      max-width: none;
+    }
+  }
   .hamburger{
     line-height: 50px;
+    position: relative;
+    z-index: 3;
     text-align: center;
     background: rgba(255,255,255, 0.5);
     cursor: pointer;
@@ -20,8 +24,8 @@ header {
   }
   nav {
     position: fixed;
+    z-index: 4;
     background: $mainColor;
-    z-index: 1;
     display: none;
     text-transform: uppercase;
 
@@ -29,14 +33,14 @@ header {
       text-align: center;
       @include desktop{
         display: flex;
-        //justify-content: space-around;
-        //justify-content: space-between;
+        flex: 1 0 auto;
       }
       li {
         min-height: 30px;
         font-size: 15px;
         cursor: pointer;
         padding-top: 5px;
+        flex-grow: 1;
         &:hover{
           color: $colorText;
           font-weight: bold;
@@ -50,12 +54,12 @@ header {
           font-size: 20px;
           min-height: 50px;
           width: (78%/6);
-          border: 1px solid red;
         }
       }
 
     }
   }
+
   #about{
 
     h1{

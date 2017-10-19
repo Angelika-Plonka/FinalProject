@@ -2,8 +2,8 @@ $(document).ready(function () {
 
     /* hamburger menu */
 
-    let hamburger = $(".hamburger")
-    let desktopMenu = $(".desktopMenu")
+    let hamburger = $(".hamburger");
+    let desktopMenu = $(".desktopMenu");
 
     hamburger.on("click", function () {
         desktopMenu.slideToggle();
@@ -13,7 +13,7 @@ $(document).ready(function () {
         if (window.innerWidth < 640) {
             desktopMenu.slideToggle();
         }
-    })
+    });
 
     let resize = function () {
         if (window.innerWidth >= 640) {
@@ -23,7 +23,7 @@ $(document).ready(function () {
             desktopMenu.hide();
             hamburger.fadeIn();
         }
-    }
+    };
     resize();
 
     window.addEventListener("resize", function () {
