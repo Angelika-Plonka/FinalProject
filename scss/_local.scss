@@ -18,6 +18,9 @@
       color: darkred;
       text-shadow: 1px -2px 5px black;
       font-size: 30px;
+      @include mobile{
+        padding-top: 20vh;
+      }
       padding-bottom: 5%;
       @include desktop {
         font-size: 35px;
@@ -26,7 +29,7 @@
     }
     h3 {
       font-family: $fontItalics;
-      font-size: 25px;
+      font-size: 30px;
       line-height: 250%;
       font-weight: bold;
       @include desktop {
@@ -34,7 +37,7 @@
       }
     }
     h4 {
-      font-size: 15px;
+      font-size: 18px;
       @include desktop {
         font-size: 20px;
       }

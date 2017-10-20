@@ -100,7 +100,7 @@ html {
 }
 
 #slider .row {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 @media (min-width: 640px) {
@@ -117,7 +117,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  height: 200px;
+  height: 300px;
   width: 100%;
 }
 
@@ -217,7 +217,7 @@ header.home.container {
 header .hamburger {
   line-height: 50px;
   position: relative;
-  z-index: 3;
+  z-index: 6;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -227,6 +227,10 @@ header .hamburger {
   header .hamburger {
     display: none;
   }
+}
+
+header .hamburger .fa {
+  position: fixed;
 }
 
 header nav {
@@ -673,7 +677,7 @@ input[type=button] {
   box-shadow: 0px 5px 10px 3px white;
   font-size: 15px;
   font-weight: bold;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   position: relative;
   z-index: 3;
 }
@@ -716,7 +720,15 @@ input[type=button] {
 #health,
 #products,
 #perfume {
-  min-height: 600px;
+  min-height: 400px;
+}
+
+@media (min-width: 640px) {
+  #health,
+  #products,
+  #perfume {
+    height: 600px;
+  }
 }
 
 #slider {
@@ -848,7 +860,7 @@ div.slide:nth-of-type(5) {
 }
 
 #products .row {
-  padding-top: 50px;
+  padding-top: 300px;
 }
 
 @media (min-width: 640px) {
@@ -895,68 +907,75 @@ div.slide:nth-of-type(5) {
 }
 
 #perfume .row {
-  padding-top: 50px;
+  padding-top: 10vh;
 }
 
 @media (min-width: 640px) {
   #perfume .row {
     padding-top: 30vh;
   }
-
-  #perfume .row div {
-    padding-right: 5%;
-  }
-
-  #perfume .row div a {
-    color: white;
-    -webkit-box-shadow: 0px 5px 10px 3px white;
-    -moz-box-shadow: 0px 5px 10px 3px white;
-    box-shadow: 0px 5px 10px 3px white;
-    text-decoration: none;
-    background-color: #0f2e24;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 10px;
-    position: relative;
-    z-index: 3;
-  }
-
-  #perfume .row div a:hover {
-    background-color: #18483a;
-    cursor: pointer;
-  }
 }
 
-@media (min-width: 640px) and (min-width: 640px) {
+#perfume .row div {
+  padding-right: 5%;
+  margin-bottom: 30vh;
+}
+
+#perfume .row div a {
+  color: white;
+  -webkit-box-shadow: 0px 5px 10px 3px white;
+  -moz-box-shadow: 0px 5px 10px 3px white;
+  box-shadow: 0px 5px 10px 3px white;
+  text-decoration: none;
+  background-color: #0f2e24;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+#perfume .row div a:hover {
+  background-color: #18483a;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
   #perfume .row div a {
     font-size: 20px;
   }
+}
+
+#perfume .row div:nth-of-type(2) {
+  margin-bottom: 5vh;
 }
 
 #perfume .row h2 {
   font-family: "Dancing Script", cursive;
   color: darkred;
   text-shadow: 1px -2px 5px black;
-  font-size: 30px;
-  padding-bottom: 10%;
+  font-size: 40px;
+  padding-bottom: 5%;
 }
 
 @media (min-width: 640px) {
   #perfume .row h2 {
     font-size: 45px;
     font-weight: bold;
+    padding-bottom: 10%;
   }
 }
 
 #perfume .row h3 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
-  padding-bottom: 15%;
+  padding-bottom: 10%;
 }
 
 @media (min-width: 640px) {
   #perfume .row h3 {
     font-size: 25px;
+    padding-bottom: 15%;
   }
 }
 
@@ -1024,7 +1043,7 @@ div.slide:nth-of-type(5) {
   margin-top: 20px;
   color: white;
   background-color: #0f2e24;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   padding: 10px;
   position: relative;
@@ -1049,7 +1068,7 @@ div.slide:nth-of-type(5) {
 
 #contact .row #social {
   width: 80vw;
-  height: 80vh;
+  height: 60vh;
   margin: 10vh 10vw;
   color: white;
   border-radius: 100px 100px 100px 100px;
@@ -1124,6 +1143,12 @@ div.slide:nth-of-type(5) {
   padding-bottom: 5%;
 }
 
+@media (max-width: 640px) {
+  #local .row h2 {
+    padding-top: 20vh;
+  }
+}
+
 @media (min-width: 640px) {
   #local .row h2 {
     font-size: 35px;
@@ -1133,7 +1158,7 @@ div.slide:nth-of-type(5) {
 
 #local .row h3 {
   font-family: "Dancing Script", cursive;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 250%;
   font-weight: bold;
 }
@@ -1145,7 +1170,7 @@ div.slide:nth-of-type(5) {
 }
 
 #local .row h4 {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 @media (min-width: 640px) {
