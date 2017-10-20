@@ -1,14 +1,10 @@
 
 #slider{
-  margin: 50px auto;
-  @include desktop{
-    margin: 150px auto;
-  }
-  height: 200px;
-  @include desktop{
-    height: 450px;
-  }
-  div.row{
+  .row{
+    padding-top: 50px;
+    @include desktop{
+      padding-top: 20vh;
+    }
     >div{
       position: relative;
       .slide{

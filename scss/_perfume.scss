@@ -1,49 +1,51 @@
-#perfume{
+#perfume {
   text-align: center;
-  margin: 50px auto;
-  @include desktop{
-    margin: 150px auto;
-  }
-  div div{
-    padding-right: 5%;
-    a{
-      color: $colorText;
-      -webkit-box-shadow: 0px 5px 10px 3px $colorText;
-      -moz-box-shadow: 0px 5px 10px 3px $colorText;
-      box-shadow: 0px 5px 10px 3px $colorText;
-      text-decoration: none;
-      background-color: lighten($mainColor,8%);
-      font-size: 15px;
-      font-weight: bold;
-      padding: 10px;
-      position: relative;
-      z-index: 3;
-      &:hover{
-        background-color: lighten($mainColor,15%);
-        cursor: pointer;
-      }
-      @include desktop{
-        font-size: 20px;
+  .row {
+    padding-top: 50px;
+    @include desktop {
+      padding-top: 30vh;
+      div {
+        padding-right: 5%;
+        a {
+          color: $colorText;
+          -webkit-box-shadow: 0px 5px 10px 3px $colorText;
+          -moz-box-shadow: 0px 5px 10px 3px $colorText;
+          box-shadow: 0px 5px 10px 3px $colorText;
+          text-decoration: none;
+          background-color: lighten($mainColor, 8%);
+          font-size: 15px;
+          font-weight: bold;
+          padding: 10px;
+          position: relative;
+          z-index: 3;
+          &:hover {
+            background-color: lighten($mainColor, 15%);
+            cursor: pointer;
+          }
+          @include desktop {
+            font-size: 20px;
+          }
+        }
       }
     }
-  }
-  h2{
-    font-family: $fontItalics;
-    color: darkred;
-    text-shadow: 1px -2px 5px black;
-    font-size: 30px;
-    padding-bottom: 10%;
-    @include desktop{
-      font-size: 45px;
-      font-weight: bold;
+    h2 {
+      font-family: $fontItalics;
+      color: darkred;
+      text-shadow: 1px -2px 5px black;
+      font-size: 30px;
+      padding-bottom: 10%;
+      @include desktop {
+        font-size: 45px;
+        font-weight: bold;
+      }
     }
-  }
-  h3{
-    font-size: 20px;
-    font-weight:bold;
-    padding-bottom: 15%;
-    @include desktop{
-      font-size: 25px;
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 15%;
+      @include desktop {
+        font-size: 25px;
+      }
     }
   }
 }

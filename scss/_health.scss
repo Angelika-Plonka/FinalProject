@@ -1,9 +1,11 @@
 #health{
-  margin: 50px auto;
-  text-align: center;
-  @include desktop{
-    margin: 150px auto
+  .row{
+    padding-top: 50px;
+    @include desktop{
+      padding-top: 25vh;
+    }
   }
+  text-align: center;
   div div{
     padding-right: 5%;
     a{

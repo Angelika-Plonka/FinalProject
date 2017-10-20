@@ -1,10 +1,12 @@
-html{
-  background: $mainColor;
-  color: $colorText;
+#health, #products, #perfume{
+  min-height: 600px;
 }
 
-#health, #products, #perfume{
-  min-height: 400px;
+#slider{
+  height: 200px;
+  @include desktop{
+    height: 550px;
+  }
 }
 
 #contact, #local{
@@ -12,6 +14,6 @@ html{
   z-index: 3;
   height: 650px;
   @include desktop{
-    height: 450px;
+    height: 600px;
   }
 }

@@ -1,7 +1,9 @@
 #products {
-  margin: 50px auto;
-  @include desktop{
-    margin: 150px auto
+  .row{
+    padding-top: 50px;
+    @include desktop{
+      padding-top: 30vh;
+    }
   }
   text-align: left;
   div div:nth-of-type(2) {

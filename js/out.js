@@ -125,6 +125,27 @@ $(document).ready(function () {
             scrollTop: 0
         }, 800);
     });
+
+    /* form validation */
+    var submitBtn = $("input[type=submit]");
+    var form = $("form");
+
+    submitBtn.on("click", function () {
+        event.preventDefault();
+        var name = $("input[name=user]");
+        var email = $("input[type=email]");
+        var message = $("textarea");
+
+        if (name.val().length <= 2 || message.val().length === 0 || email.val().indexOf("@") < 0) {
+            event.preventDefault();
+            alert("Prosimy uzupełnić wszystkie pola. Adres email powinien zawierać znak @!");
+        } else {
+            alert("Dziękujemy, Twoja wiadomość została wysłana");
+            name.val("");
+            email.val("");
+            message.val("");
+        }
+    });
 });
 
 /***/ })

@@ -1,6 +1,6 @@
 #opening{
   position: fixed;
-  z-index: 6;
+  z-index: 7;
   top: 0;
   left: 0;
   width: 100vw;
@@ -71,7 +71,7 @@
     background-color: black;
     display: block;
     opacity: 1;
-    z-index: 5;
+    z-index: 7;
   }
   100% {
     background-color: black;
@@ -91,7 +91,7 @@
     transform: translateY(-300px) scale(2);
     display: block;
     opacity: 1;
-    z-index: 5;
+    z-index: 7;
   }
   100% {
     transform: translateY(-300px) scale(2);

@@ -1,48 +1,50 @@
-#local{
-  margin: 50px auto 0 auto;
+#local {
   text-align: center;
-  @include desktop{
-    margin: 300px auto 0 auto;
-  }
-  iframe{
-    width: 90%;
-    height: 350px;
-    margin-left: 5%;
-    @include desktop{
-      height: 400px;
+  .row {
+    padding-top: 50px;
+    @include desktop {
+      padding-top: 20vh;
     }
-  }
-  h2{
-    font-family: $fontItalics;
-    color: darkred;
-    text-shadow: 1px -2px 5px black;
-    font-size: 30px;
-    padding-bottom: 5%;
-    @include desktop{
-      font-size: 35px;
-      font-weight: bold;
+    iframe {
+      width: 90%;
+      height: 350px;
+      margin-left: 5%;
+      @include desktop {
+        height: 400px;
+      }
     }
-  }
-  h3{
-    font-family: $fontItalics;
-    font-size: 25px;
-    line-height: 250%;
-    font-weight:bold;
-    @include desktop{
-      font-size: 35px;
+    h2 {
+      font-family: $fontItalics;
+      color: darkred;
+      text-shadow: 1px -2px 5px black;
+      font-size: 30px;
+      padding-bottom: 5%;
+      @include desktop {
+        font-size: 35px;
+        font-weight: bold;
+      }
     }
-  }
-  h4{
-    font-size: 15px;
-    @include desktop{
-      font-size: 20px;
-    }
-    &:nth-of-type(3){
-      font-weight: bold;
-      font-size: 20px;
+    h3 {
+      font-family: $fontItalics;
+      font-size: 25px;
       line-height: 250%;
-      @include desktop{
-        font-size: 25px;
+      font-weight: bold;
+      @include desktop {
+        font-size: 35px;
+      }
+    }
+    h4 {
+      font-size: 15px;
+      @include desktop {
+        font-size: 20px;
+      }
+      &:nth-of-type(3) {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 250%;
+        @include desktop {
+          font-size: 25px;
+        }
       }
     }
   }

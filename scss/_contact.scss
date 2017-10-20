@@ -1,97 +1,100 @@
 #contact {
-  margin: 50px auto;
-  @include desktop{
-    margin: 200px auto;
-  }
-  h2 {
-    text-align: center;
-    color: darkred;
-    text-shadow: 1px -2px 5px black;
-    font-family: $fontItalics;
-    font-size: 30px;
-    padding-bottom: 5%;
-    @include desktop{
-      font-size: 50px;
-      font-weight: bold;
+  .row {
+    padding-top: 50px;
+    @include desktop {
+      padding-top: 10vh;
     }
-  }
-  h3{
-    color: darkred;
-    text-align: center;
-    line-height: 400%;
-    font-size: 25px;
-    font-weight: bold;
-    @include desktop{
-      font-size: 40px;
-    }
-  }
-  form {
-    font-size: 25px;
-    line-height: 150%;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    label {
-      margin-top: 15px;
-    }
-    input {
-      display: block;
-      margin: 0 auto;
-      width: 90%;
-      &:last-of-type {
-        width: 50%;
-        font-family: $fontRegular;
-        margin-top: 20px;
-        color: $colorText;
-        background-color: lighten($mainColor,8%);
-        font-size: 15px;
+    h2 {
+      text-align: center;
+      color: darkred;
+      text-shadow: 1px -2px 5px black;
+      font-family: $fontItalics;
+      font-size: 30px;
+      padding-bottom: 5%;
+      @include desktop {
+        font-size: 50px;
         font-weight: bold;
-        padding: 10px;
-        position: relative;
-        z-index: 3;
-        &:hover{
-          background-color: lighten($mainColor,15%);
-          cursor: pointer;
-        }
-        @include desktop{
-          font-size: 20px;
-        }
       }
     }
-    textarea {
-      width: 90%;
-      height: 30vh;
+    h3 {
+      color: darkred;
+      text-align: center;
+      line-height: 400%;
+      font-size: 25px;
+      font-weight: bold;
+      @include desktop {
+        font-size: 40px;
+      }
     }
-  }
-  #social{
-    width: 50%;
-    height: 50%;
-    //margin: 15% 0 15% 0;
-    @include desktop{
-      width: 45%;
-      height: 400px;
-      margin: 5% 0 0 5%;
+    form {
+      font-size: 25px;
+      line-height: 150%;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      label {
+        margin-top: 15px;
+      }
+      input {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        &:last-of-type {
+          width: 50%;
+          font-family: $fontRegular;
+          margin-top: 20px;
+          color: $colorText;
+          background-color: lighten($mainColor, 8%);
+          font-size: 15px;
+          font-weight: bold;
+          padding: 10px;
+          position: relative;
+          z-index: 3;
+          &:hover {
+            background-color: lighten($mainColor, 15%);
+            cursor: pointer;
+          }
+          @include desktop {
+            font-size: 20px;
+          }
+        }
+      }
+      textarea {
+        width: 90%;
+        height: 30vh;
+      }
     }
-    color: $colorText;
-    border-radius: 100px 100px 100px 100px;
-    -moz-border-radius: 100px 100px 100px 100px;
-    -webkit-border-radius: 100px 100px 100px 100px;
-    border: 5px solid $colorText;
-  }
-  .fa {
-    font-size: 80px;
-    padding: 25px;
-    @include desktop{
-      padding: 35px;
+    #social {
+      width: 80vw;
+      height: 80vh;
+      margin: 10vh 10vw;
+      @include desktop {
+        width: 45%;
+        height: 400px;
+        margin: 5% 0 0 5%;
+      }
+      color: $colorText;
+      border-radius: 100px 100px 100px 100px;
+      -moz-border-radius: 100px 100px 100px 100px;
+      -webkit-border-radius: 100px 100px 100px 100px;
+      border: 5px solid $colorText;
     }
-    &:first-of-type {
-    color: #3b5998;
-    }
-    &:nth-of-type(2){
-      color: #00aced;
-    }
-    &:last-of-type{
-      color: #cc181e;
+    .fa {
+      font-size: 20vh;
+      padding: 5%;
+      @include desktop {
+        padding: 35px;
+        font-size: 12vh;
+      }
+      &:first-of-type {
+        color: #3b5998;
+      }
+      &:nth-of-type(2) {
+        color: #00aced;
+      }
+      &:last-of-type {
+        color: #cc181e;
+      }
     }
   }
 }
