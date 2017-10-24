@@ -127,23 +127,61 @@ $(document).ready(function () {
     });
 
     /* form validation */
-    var submitBtn = $("input[type=submit]");
-    var form = $("form");
-
-    submitBtn.on("click", function () {
-        event.preventDefault();
-        var name = $("input[name=user]");
-        var email = $("input[type=email]");
-        var message = $("textarea");
-
-        if (name.val().length <= 2 || message.val().length === 0 || email.val().indexOf("@") < 0) {
-            event.preventDefault();
-            alert("Prosimy uzupełnić wszystkie pola. Adres email powinien zawierać znak @!");
+    //user validation
+    $('#user').on('blur', function () {
+        var input = $(this);
+        var name_length = input.val().length;
+        if (name_length >= 4 && name_length <= 15) {
+            input.removeClass("invalid").addClass("valid");
+            input.next('.prompt').text("").removeClass("error").addClass("right");
         } else {
-            alert("Dziękujemy, Twoja wiadomość została wysłana");
-            name.val("");
-            email.val("");
+            input.removeClass("valid").addClass("invalid");
+            input.next('.prompt').text("Pole musi mieć więcej niż 3 i mniej niż 16 znaków!").addClass("error");
+        }
+    });
+
+    //email validation
+    $('#mail').on('blur', function () {
+        var input = $(this);
+        var pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        var emailTest = pattern.test(input.val());
+        if (emailTest) {
+            input.removeClass("invalid").addClass("valid");
+            input.next('.prompt').text("").removeClass("error").addClass("right");
+        } else {
+            input.removeClass("valid").addClass("invalid");
+            input.next('.prompt').text("Wprowadź poprawny email!").addClass("error");
+        }
+    });
+
+    //message validation
+    $('#message').on('blur', function () {
+        var input = $(this);
+        var message = $(this).val();
+        if (message) {
+            input.removeClass("invalid").addClass("valid");
+            input.next('.prompt').text("").removeClass("error").addClass("right");
+        } else {
+            input.removeClass("valid").addClass("invalid");
+            input.next('.prompt').text("Wiadomość nie może być pusta!").addClass("error");
+        }
+    });
+
+    var submitBtn = $("input[type=submit]");
+    submitBtn.on("click", function (event) {
+        event.preventDefault();
+        var user = $('#user');
+        var mail = $('#mail');
+        var message = $('#message');
+
+        if (user.hasClass('valid') && mail.hasClass('valid') && message.hasClass('valid')) {
+            alert("Pomyślnie wysłano formularz.");
+            user.val("");
+            mail.val("");
             message.val("");
+        } else {
+            event.preventDefault();
+            alert("Uzupełnij wszystkie pola!");
         }
     });
 });

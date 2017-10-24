@@ -16,22 +16,21 @@
         font-weight: bold;
       }
     }
-    h3 {
-      color: darkred;
-      text-align: center;
-      line-height: 400%;
-      font-size: 25px;
-      font-weight: bold;
-      @include desktop {
-        font-size: 40px;
-      }
-    }
     form {
       font-size: 25px;
       line-height: 150%;
       width: 100%;
       height: 100%;
       text-align: center;
+      .error {
+        color: red;
+        font-size: 15px;
+      }
+
+      .right {
+        color: green;
+        font-size: 15px;
+      }
       label {
         margin-top: 15px;
       }
@@ -42,7 +41,6 @@
         &:last-of-type {
           width: 50%;
           font-family: $fontRegular;
-          margin-top: 20px;
           color: $colorText;
           background-color: lighten($mainColor, 8%);
           font-size: 18px;
@@ -63,37 +61,58 @@
         width: 90%;
         height: 30vh;
       }
+      input.invalid, textarea.invalid{
+        border: 3px solid red;
+      }
+
+      input.valid, textarea.valid{
+        border: 3px solid green;
+      }
     }
     #social {
-      width: 80vw;
-      height: 60vh;
-      margin: 10vh 10vw;
+      width: 90vw;
+      height: 20vh;
+      text-align: center;
+      margin: 10% 0;
       @include desktop {
         width: 45%;
         height: 400px;
-        margin: 5% 0 0 5%;
+        margin: 5% 0 5% 5%;
       }
       color: $colorText;
-      border-radius: 100px 100px 100px 100px;
-      -moz-border-radius: 100px 100px 100px 100px;
-      -webkit-border-radius: 100px 100px 100px 100px;
-      border: 5px solid $colorText;
-    }
-    .fa {
-      font-size: 20vh;
-      padding: 5%;
-      @include desktop {
-        padding: 35px;
-        font-size: 12vh;
+      @include desktop{
+        border: 5px solid $colorText;
+        border-radius: 100px 100px 100px 100px;
+        -moz-border-radius: 100px 100px 100px 100px;
+        -webkit-border-radius: 100px 100px 100px 100px;
       }
-      &:first-of-type {
-        color: #3b5998;
+      h3 {
+        color: darkred;
+        text-align: center;
+        line-height: 200%;
+        font-size: 25px;
+        font-weight: bold;
+        @include desktop {
+          font-size: 40px;
+          line-height: 400%;
+        }
       }
-      &:nth-of-type(2) {
-        color: #00aced;
-      }
-      &:last-of-type {
-        color: #cc181e;
+      .fa {
+        font-size: 10vh;
+        padding: 0 4%;
+        @include desktop {
+          padding: 5% 8% 5% 8%;
+          font-size: 10vh;
+        }
+        &:first-of-type {
+          color: #3b5998;
+        }
+        &:nth-of-type(2) {
+          color: #00aced;
+        }
+        &:last-of-type {
+          color: #cc181e;
+        }
       }
     }
   }

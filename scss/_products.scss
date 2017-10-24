@@ -1,6 +1,6 @@
 #products {
   .row{
-    padding-top: 300px;
+    margin-top: 20vh;
     @include desktop{
       padding-top: 30vh;
     }
@@ -10,9 +10,8 @@
     padding-left: 8%;
     ul {
       list-style: square;
-      text-align: left;
       li{
-        font-size: 20px;
+        font-size: 25px;
         padding-bottom: 5%;
         @include desktop{
           font-size: 30px;

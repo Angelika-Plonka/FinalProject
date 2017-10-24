@@ -121,12 +121,15 @@
             <div class="col-m-6 col-d-3">
                 <h2> Zostaw wiadomość! </h2>
                 <form method="post">
-                    <label for="user">Imię i nazwisko: </label>
-                    <input type="text" name="user" placeholder="Imię i nazwisko"/>
-                    <label for="mail">E-mail: </label>
-                    <input type="email" name="mail" placeholder="Adres e-mail"/>
-                    <label>Twoja wiadomość: </label>
-                    <textarea placeholder="Twoja wiadomość"></textarea>
+                    <label for="user">Imię i nazwisko:</label>
+                    <input type="text" id="user" name="user" placeholder="Imię i nazwisko"/>
+                    <span class="prompt"></span>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" name="mail" id="mail" placeholder="Adres e-mail"/>
+                    <span class="prompt"></span>
+                    <label for="message">Twoja wiadomość:</label>
+                    <textarea id="message" name="message" placeholder="Twoja wiadomość"></textarea>
+                    <span class="prompt"></span>
                     <input type="submit" value="Wyślij wiadomość"/>
                 </form>
             </div>

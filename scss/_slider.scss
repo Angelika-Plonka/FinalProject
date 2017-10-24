@@ -1,7 +1,8 @@
 
 #slider{
   .row{
-    padding-top: 100px;
+    margin-bottom: 75%;
+    padding-top: 25%;
     @include desktop{
       padding-top: 20vh;
     }
@@ -29,6 +30,7 @@
           position: absolute;
           top: 15px;
           left: 25%;
+          font-size: 30px;
           font-weight: bold;
           color: $colorText2;
           text-shadow: 1px -2px 5px black;
